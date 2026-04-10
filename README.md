@@ -94,7 +94,7 @@ define('DB_NAME', 'your_database_name');
 Access the HOD panel to view and manage all submissions.
 
 - **URL**: `http://your-domain.com/hod-dashboard.php`
-- **Default Password**: `brainware@hod`
+- **Default Password**: `Contact Department Administrator`
 
 ---
 
