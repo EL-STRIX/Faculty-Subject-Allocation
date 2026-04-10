@@ -1,0 +1,21 @@
+# Security
+db.php
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs and temp files
+*.log
+tmp/
+temp/
+
+# PHP specific
+composer.lock
+vendor/
