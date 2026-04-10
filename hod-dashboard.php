@@ -14,7 +14,7 @@
 session_start();
 require_once 'db.php';
 
-$HOD_PASSWORD = 'brainware@hod';
+$HOD_PASSWORD = 'brainware';
 $error_msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['hod_password'])) {
