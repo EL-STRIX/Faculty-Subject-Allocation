@@ -60,6 +60,18 @@ brainware-faculty/
 
 ---
 
+## 🏃 Quick Start / How to Run
+
+Follow these steps to get the project running on your local machine:
+
+1.  **Environment Setup**: Ensure you have **XAMPP** installed with **Apache** and **MySQL** services running.
+2.  **Project Location**: Place the repository folder in `C:\xampp\htdocs\brainware-faculty\`.
+3.  **Database Config**: Open `db.php` and set the credentials to your local settings (usually `localhost`, `root`, and empty password).
+4.  **Run the App**: Open your browser and go to `http://localhost/brainware-faculty/`.
+5.  **Admin Access**: To view submissions, go to `http://localhost/brainware-faculty/hod-dashboard.php` and use password: `brainware`.
+
+---
+
 ## 💻 Local Setup (XAMPP)
 
 1. **Clone the Project**:
@@ -84,18 +96,6 @@ brainware-faculty/
 
 ---
 
-## 🌐 Production Deployment
-
-The project is currently configured for deployment on **InfinityFree**. The credentials in `db.php` are:
-
-```php
-define('DB_HOST', 'sql100.infinityfree.com');
-define('DB_USER', 'if0_41629436');
-define('DB_PASS', 'VrQOyzOJuiRreQ');
-define('DB_NAME', 'if0_41629436_brainware_faculty');
-```
-
----
 
 ## 🔐 Administrative Access
 
