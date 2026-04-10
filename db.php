@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', 'sql100.infinityfree.com');
-define('DB_USER', 'if0_41629436');
-define('DB_PASS', 'VrQOyzOJuiRreQ');
-define('DB_NAME', 'if0_41629436_brainware_faculty');
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'brainware_faculty');
 
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS);
 
