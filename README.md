@@ -108,13 +108,13 @@ Access the HOD panel to view and manage all submissions.
 
 ## 👥 Contributors
 
-*(Waiting for your first contribution!)*
+- [Rajdeep Nemo](https://github.com/Rajdeep-Nemo)
 
 ---
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This project is licensed under the terms described in [LICENSE](LICENSE)
 
 ---
 
