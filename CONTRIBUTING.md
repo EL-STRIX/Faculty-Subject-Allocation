@@ -21,7 +21,7 @@ To contribute effectively, set up your local environment:
 
 1. **Prerequisites:** Ensure you have an AMP stack installed (XAMPP, MAMP, or LAMP). You will need PHP 7.4+ and a MySQL server running.
 2. **Fork & Clone:** Fork the repository to your GitHub account, then clone it to your local web server's document root (e.g., `C:\xampp\htdocs\brainware-faculty`).
-3. **Database Configuration:** The application auto-provisions its database. Simply ensure `config/db.php` has the correct local credentials (default is `root` with no password).
+3. **Database Configuration:** The application auto-provisions its database. Copy `config/db.sample.php` to `config/db.php` and ensure it has the correct local credentials (default is `root` with no password).
 4. **Access the App:** Open `http://localhost/brainware-faculty/` in your browser. The database (`brainware_faculty`) will be created automatically.
 
 ---

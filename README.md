@@ -69,7 +69,7 @@ To run this project locally, you will need a standard AMP stack (e.g., XAMPP, MA
 2. **Start your services**: Ensure both Apache and MySQL are running.
 
 3. **Configure the Database (Optional)**:
-   By default, `config/db.php` is configured to use `localhost`, the `root` user, and an empty password. If your local environment differs, update `config/db.php`:
+   Rename `config/db.sample.php` to `config/db.php`. By default, it is configured to use `localhost`, the `root` user, and an empty password. If your local environment differs, update `config/db.php`:
    ```php
    define('DB_HOST', 'localhost');
    define('DB_USER', 'root');
