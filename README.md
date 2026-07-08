@@ -25,7 +25,7 @@ The **Faculty Subject Allocation System** is a streamlined, web-based platform d
 - **✅ Smart Validation**: Prevents duplicate subject selections and duplicate faculty entries.
 - **📊 Real-time Stats**: HOD dashboard provides instant metrics on total submissions and subject coverage.
 - **🔍 Advanced Filtering**: Search and filter allocations by faculty name or specific subjects.
-- **📥 Multi-format Export**: Download allocation reports in **CSV**, **Excel**, or professionally formatted **PDF**.
+- **📥 Multi-format Export**: Download allocation reports in **Excel**, or professionally printed to **PDF**.
 - **📱 Responsive Design**: Fully optimized for mobile, tablet, and desktop viewing.
 - **⚙️ Auto-Setup**: Database and tables are automatically initialized on the first run.
 
@@ -36,7 +36,6 @@ The **Faculty Subject Allocation System** is a streamlined, web-based platform d
 - **Frontend**: HTML5, Vanilla CSS3 (Custom Design System), JavaScript (ES6+)
 - **Backend**: PHP 7.4+ / 8.x
 - **Database**: MySQL / MariaDB
-- **Libraries**: [FPDF](http://www.fpdf.org/) (for PDF generation)
 
 ---
 
@@ -49,13 +48,11 @@ brainware-faculty/
 ├── submit.php             # Backend logic for form processing
 ├── hod-dashboard.php      # HOD administrative panel (secure)
 ├── db.php                 # Database connection & auto-migration
-├── export-csv.php         # CSV data extraction logic
 ├── export-excel.php       # Excel spreadsheet generator
 ├── assets/                # CSS, JS, and documentation assets
 │   ├── docs/              # README images and mockups
 │   ├── style.css          # Main application stylesheet
 │   └── form.js            # Frontend interactivity
-└── fpdf/                  # PDF generation library
 ```
 
 ---
