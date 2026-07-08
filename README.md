@@ -1,117 +1,110 @@
-# Faculty Subject Allocation System — Brainware University
+# Faculty Subject Allocation System
+
+A lightweight, production-ready web application built for the Computational Sciences Department at Brainware University. The system streamlines the process of collecting and managing subject preferences from faculty members for the upcoming academic year.
 
 ![Project Banner](assets/docs/banner.png)
 
-[![PHP Version](https://img.shields.io/badge/php-%3E%3D7.4-blue.svg)](https://www.php.net/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
-[![Deployment](https://img.shields.io/badge/deployment-InfinityFree-orange.svg)](https://infinityfree.net/)
+## Overview
 
-The **Faculty Subject Allocation System** is a streamlined, web-based platform designed for Brainware University's Computational Sciences Department. It allows faculty members to submit their subject preferences for the upcoming academic year and provides a secure dashboard for the Head of Department (HOD) to manage, filter, and export allocation data.
+The Faculty Subject Allocation System provides a secure, intuitive interface for faculty to submit their teaching preferences. It replaces manual data collection with a centralized database, offering the Head of Department (HOD) a comprehensive dashboard to view, filter, manage, and export all allocations.
 
----
+## Features
 
-## 📸 UI Showcase
+- **Automated Database Provisioning:** The application automatically creates the required database and tables upon first execution—no manual SQL imports needed.
+- **Role-Based Access:** Separate, password-protected portals for Faculty members and the Head of Department.
+- **Smart Form Validation:** Real-time client-side and server-side validation ensures faculty select exactly four unique subjects from the predefined pool.
+- **HOD Dashboard:** A secure administrative panel providing real-time metrics (total submissions, subjects covered, most popular subject).
+- **Instant Search:** Client-side filtering allows administrators to quickly search submissions by faculty name or subject.
+- **Native Excel Export:** Generates true `.xlsx` spreadsheets (via `ZipArchive` and XML) for reliable data extraction without relying on third-party libraries.
+- **Print-Optimized Views:** Custom CSS print queries generate clean, professional hard copies directly from the browser.
+- **Responsive Design:** A custom, modern UI built with vanilla CSS that scales perfectly across devices.
 
-| Faculty Submission Form | HOD Management Dashboard |
-| :---: | :---: |
-| ![Form Mockup](assets/docs/form_mockup.png) | ![Dashboard Mockup](assets/docs/dashboard_mockup.png) |
-| *Clean, validation-ready interface for faculty selections.* | *Advanced filtering, stats, and export capabilities for administration.* |
+## Tech Stack
 
----
+The project embraces a minimalist approach, avoiding heavy frameworks in favor of native web technologies for maximum performance and straightforward deployment.
 
-## 🚀 Key Features
+- **Frontend:** HTML5, Vanilla CSS3, Vanilla JavaScript (ES6+)
+- **Backend:** PHP 7.4+
+- **Database:** MySQL / MariaDB
+- **Extensions:** `mysqli` (database operations), `zip` (Excel generation)
 
-- **✅ Smart Validation**: Prevents duplicate subject selections and duplicate faculty entries.
-- **📊 Real-time Stats**: HOD dashboard provides instant metrics on total submissions and subject coverage.
-- **🔍 Advanced Filtering**: Search and filter allocations by faculty name or specific subjects.
-- **📥 Multi-format Export**: Download allocation reports in **Excel**, or professionally printed to **PDF**.
-- **📱 Responsive Design**: Fully optimized for mobile, tablet, and desktop viewing.
-- **⚙️ Auto-Setup**: Database and tables are automatically initialized on the first run.
+## Project Structure
 
----
-
-## 🛠️ Technology Stack
-
-- **Frontend**: HTML5, Vanilla CSS3 (Custom Design System), JavaScript (ES6+)
-- **Backend**: PHP 7.4+ / 8.x
-- **Database**: MySQL / MariaDB
-
----
-
-## 📂 Project Structure
-
-```bash
+```text
 brainware-faculty/
-├── index.php              # Faculty preference submission form
-├── landing.php            # Post-submission confirmation page
-├── submit.php             # Backend logic for form processing
-├── hod-dashboard.php      # HOD administrative panel (secure)
-├── db.php                 # Database connection & auto-migration
-├── export-excel.php       # Excel spreadsheet generator
-├── assets/                # CSS, JS, and documentation assets
-│   ├── docs/              # README images and mockups
-│   ├── style.css          # Main application stylesheet
-│   └── form.js            # Frontend interactivity
+├── db.php                 # Database connection & automated schema provisioning
+├── landing.php            # Role selection and authentication portal
+├── index.php              # Authenticated faculty submission form
+├── submit.php             # Form processing and validation logic
+├── hod-dashboard.php      # Secure administrative dashboard
+├── export-excel.php       # Native .xlsx generation logic
+└── assets/                # Static assets directory
+    ├── docs/              # Documentation assets and UI mockups
+    ├── form.js            # Client-side dynamic dropdowns and validation
+    ├── dashboard.js       # Dashboard filtering logic
+    └── style.css          # Global styling and print media queries
 ```
 
----
+## Getting Started
 
-## 🏃 Quick Start / How to Run
+### Prerequisites
 
-Follow these steps to get the project running on your local machine:
+To run this project locally, you will need a standard AMP stack (e.g., XAMPP, MAMP, or LAMP).
 
-1.  **Environment Setup**: Ensure you have **XAMPP** installed with **Apache** and **MySQL** services running.
-2.  **Project Location**: Place the repository folder in `C:\xampp\htdocs\brainware-faculty\`.
-3.  **Database Config**: Open `db.php` and set the credentials to your local settings (usually `localhost`, `root`, and empty password).
-4.  **Run the App**: Open your browser and go to `http://localhost/brainware-faculty/`.
-5.  **Admin Access**: To view submissions, go to `http://localhost/brainware-faculty/hod-dashboard.php` and use password: `brainware`.
+- PHP 7.4 or higher
+- MySQL or MariaDB
+- Apache or Nginx Web Server
 
----
+### Installation
 
-## 💻 Local Setup (XAMPP)
-
-1. **Clone the Project**:
+1. **Clone the repository** into your local web server's document root (e.g., `htdocs` for XAMPP):
    ```bash
-   git clone https://github.com/EL-STRIX/Faculty-Subject-Allocation.git
+   git clone https://github.com/EL-STRIX/Faculty-Subject-Allocation.git brainware-faculty
    ```
-2. **Move to htdocs**:
-   Place the project folder in `C:\xampp\htdocs\brainware-faculty\`.
-3. **Start XAMPP**:
-   Ensure **Apache** and **MySQL** are running in your XAMPP Control Panel.
-4. **Configure Database**:
-   Open `db.php` and ensure the credentials match your local environment:
+
+2. **Start your services**: Ensure both Apache and MySQL are running.
+
+3. **Configure the Database (Optional)**:
+   By default, `db.php` is configured to use `localhost`, the `root` user, and an empty password. If your local environment differs, update `db.php`:
    ```php
    define('DB_HOST', 'localhost');
    define('DB_USER', 'root');
    define('DB_PASS', '');
    define('DB_NAME', 'brainware_faculty');
    ```
-5. **Access the App**:
-   Navigate to `http://localhost/brainware-faculty/`.
-   *Note: The database `brainware_faculty` will be created automatically on the first visit.*
 
----
+4. **Initialize the Application**:
+   Navigate to the project directory in your browser:
+   ```text
+   http://localhost/brainware-faculty/
+   ```
+   *The system will automatically create the `brainware_faculty` database and the necessary tables on the first visit.*
 
+## Usage
 
-## 🔐 Administrative Access
+### Faculty Portal
+Faculty members can access the submission form by selecting the **Faculty** role from the landing page.
+- **Access Password:** `brainware`
 
-Access the HOD panel to view and manage all submissions.
+### HOD Dashboard
+The Head of Department can access the administrative dashboard by selecting the **HOD** role from the landing page.
+- **Access Password:** `brainware`
+- From the dashboard, the HOD can view all submissions, search for specific records, delete incorrect entries, print reports, or download the full dataset as an Excel file.
 
-- **URL**: `http://your-domain.com/hod-dashboard.php`
-- **HOD Password**: `brainware`
+## UI Previews
 
----
+| Faculty Submission Form | HOD Management Dashboard |
+| :---: | :---: |
+| ![Form Mockup](assets/docs/form_mockup.png) | ![Dashboard Mockup](assets/docs/dashboard_mockup.png) |
 
-## 👥 Contributors
+## Contributors
 
 - [Rajdeep Nemo](https://github.com/Rajdeep-Nemo)
+- [Sujay Paul](https://github.com/Sujay-Paul)
 
----
+## License
 
-## 📄 License
-
-This project is licensed under the terms described in [LICENSE](LICENSE)
+This project is distributed under the MIT License. See the `LICENSE` file for more information.
 
 ---
 
