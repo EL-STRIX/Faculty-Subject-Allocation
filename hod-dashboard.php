@@ -6,13 +6,13 @@
     <title>HOD Dashboard | Brainware University</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="hod-body">
 
 <?php
 session_start();
-require_once 'db.php';
+require_once 'config/db.php';
 
 $HOD_PASSWORD = 'brainware';
 $error_msg = '';
@@ -181,7 +181,7 @@ if (!isset($_SESSION['hod_authenticated'])) {
                     onkeyup="filterTable()">
             </div>
             <div class="export-buttons">
-                <a href="export-excel.php" class="btn-export csv">📥 Export Excel</a>
+                <a href="api/export-excel.php" class="btn-export csv">📥 Export Excel</a>
                 <button onclick="window.print()" class="btn-export print">🖨️ Print</button>
             </div>
         </div>
@@ -278,7 +278,7 @@ if (!isset($_SESSION['hod_authenticated'])) {
         <p>This document is system-generated and intended for internal administrative use only.</p>
     </div>
 
-    <script src="assets/dashboard.js"></script>
+    <script src="assets/js/dashboard.js"></script>
 
 <?php } ?>
 

@@ -1,11 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION['hod_authenticated'])) {
-    header('Location: hod-dashboard.php');
+    header('Location: ../hod-dashboard.php');
     exit;
 }
 
-require_once 'db.php';
+require_once '../config/db.php';
 
 // Fetch data
 $result = $conn->query("SELECT * FROM faculty_submissions ORDER BY submitted_at ASC");

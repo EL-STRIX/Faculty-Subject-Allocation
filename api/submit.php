@@ -1,8 +1,8 @@
 <?php
-require_once 'db.php';
+require_once '../config/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit;
 }
 
@@ -15,20 +15,20 @@ $subject_4    = trim($conn->real_escape_string($_POST['subject_4'] ?? ''));
 
 // Validation: empty fields
 if (!$faculty_name || !$subject_1 || !$subject_2 || !$subject_3 || !$subject_4) {
-    header('Location: index.php?error=All+fields+are+required.');
+    header('Location: ../index.php?error=All+fields+are+required.');
     exit;
 }
 
 // Validation: faculty name (letters and spaces only)
 if (!preg_match("/^[a-zA-Z\s\.]+$/", $faculty_name)) {
-    header('Location: index.php?error=Invalid+faculty+name.+Only+letters+and+spaces+allowed.');
+    header('Location: ../index.php?error=Invalid+faculty+name.+Only+letters+and+spaces+allowed.');
     exit;
 }
 
 // Validation: no duplicate subjects
 $subjects = [$subject_1, $subject_2, $subject_3, $subject_4];
 if (count($subjects) !== count(array_unique($subjects))) {
-    header('Location: index.php?error=Duplicate+subjects+selected.+Each+subject+must+be+unique.');
+    header('Location: ../index.php?error=Duplicate+subjects+selected.+Each+subject+must+be+unique.');
     exit;
 }
 
@@ -69,7 +69,7 @@ $allowed_subjects = [
 ];
 foreach ($subjects as $s) {
     if (!in_array($s, $allowed_subjects)) {
-        header('Location: index.php?error=Invalid+subject+selected.');
+        header('Location: ../index.php?error=Invalid+subject+selected.');
         exit;
     }
 }
@@ -77,7 +77,7 @@ foreach ($subjects as $s) {
 // Check if faculty already submitted
 $check = $conn->query("SELECT id FROM faculty_submissions WHERE LOWER(faculty_name) = LOWER('$faculty_name') LIMIT 1");
 if ($check && $check->num_rows > 0) {
-    header('Location: index.php?error=A+submission+from+this+faculty+name+already+exists.+Please+contact+HOD+to+update.');
+    header('Location: ../index.php?error=A+submission+from+this+faculty+name+already+exists.+Please+contact+HOD+to+update.');
     exit;
 }
 
@@ -87,9 +87,9 @@ $sql = "INSERT INTO faculty_submissions (faculty_name, subject_1, subject_2, sub
 
 if ($conn->query($sql)) {
     $name_encoded = urlencode($faculty_name);
-    header("Location: index.php?success=1&name=$name_encoded");
+    header("Location: ../index.php?success=1&name=$name_encoded");
 } else {
-    header('Location: index.php?error=Database+error.+Please+try+again.');
+    header('Location: ../index.php?error=Database+error.+Please+try+again.');
 }
 
 $conn->close();

@@ -2,7 +2,7 @@
 
 A lightweight, production-ready web application built for the Computational Sciences Department at Brainware University. The system streamlines the process of collecting and managing subject preferences from faculty members for the upcoming academic year.
 
-![Project Banner](assets/docs/banner.png)
+![Project Banner](docs/banner.png)
 
 ## Overview
 
@@ -32,17 +32,21 @@ The project embraces a minimalist approach, avoiding heavy frameworks in favor o
 
 ```text
 brainware-faculty/
-├── db.php                 # Database connection & automated schema provisioning
+├── config/                # Configuration and provisioning
+│   └── db.php             
+├── api/                   # Backend processing endpoints
+│   ├── submit.php         
+│   └── export-excel.php   
+├── assets/                # Static web assets
+│   ├── css/               
+│   │   └── style.css      
+│   └── js/                
+│       ├── form.js        
+│       └── dashboard.js   
+├── docs/                  # Documentation and UI mockups
 ├── landing.php            # Role selection and authentication portal
 ├── index.php              # Authenticated faculty submission form
-├── submit.php             # Form processing and validation logic
-├── hod-dashboard.php      # Secure administrative dashboard
-├── export-excel.php       # Native .xlsx generation logic
-└── assets/                # Static assets directory
-    ├── docs/              # Documentation assets and UI mockups
-    ├── form.js            # Client-side dynamic dropdowns and validation
-    ├── dashboard.js       # Dashboard filtering logic
-    └── style.css          # Global styling and print media queries
+└── hod-dashboard.php      # Secure administrative dashboard
 ```
 
 ## Getting Started
@@ -95,7 +99,7 @@ The Head of Department can access the administrative dashboard by selecting the 
 
 | Faculty Submission Form | HOD Management Dashboard |
 | :---: | :---: |
-| ![Form Mockup](assets/docs/form_mockup.png) | ![Dashboard Mockup](assets/docs/dashboard_mockup.png) |
+| ![Form Mockup](docs/form_mockup.png) | ![Dashboard Mockup](docs/dashboard_mockup.png) |
 
 ## Contributors
 

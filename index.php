@@ -13,7 +13,7 @@ if (!isset($_SESSION['faculty_authenticated'])) {
     <title>Faculty Subject Allocation | Brainware University</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -69,7 +69,7 @@ if (!isset($_SESSION['faculty_authenticated'])) {
                 <p>Please select 4 unique subjects you will be teaching this semester.</p>
             </div>
 
-            <form action="submit.php" method="POST" id="allocationForm">
+            <form action="api/submit.php" method="POST" id="allocationForm">
 
                 <!-- Faculty Name -->
                 <div class="form-group">
@@ -205,6 +205,6 @@ if (!isset($_SESSION['faculty_authenticated'])) {
         <p style="margin-top:6px;font-size:12px;opacity:0.7;">Developed by <strong>Sujay Paul</strong></p>
     </footer>
 
-    <script src="assets/form.js"></script>
+    <script src="assets/js/form.js"></script>
 </body>
 </html>
