@@ -103,8 +103,10 @@ The Head of Department can access the administrative dashboard by selecting the 
 
 ## Contributors
 
+Every developer who contributes to this project is required to add their name and GitHub profile link to this section. We value every contribution!
+
 - [Rajdeep Nemo](https://github.com/Rajdeep-Nemo)
-- [Sujay Paul](https://github.com/Sujay-Paul)
+- [EL-STRIX](https://github.com/EL-STRIX/)
 
 ## License
 

@@ -69,9 +69,10 @@ We strictly follow [Conventional Commits](https://www.conventionalcommits.org/).
 ## 🔄 Pull Request Workflow
 
 1. **Sync with Main:** Before creating a PR, ensure your branch is up to date with the upstream `main` branch.
-2. **Test Your Changes:** Verify that your changes do not break existing functionality. Test the faculty submission flow, the HOD dashboard, and the Excel export.
-3. **Open the PR:** Submit your Pull Request against the `main` branch. Provide a clear description of the problem you are solving and the approach you took.
-4. **Review Process:** A maintainer will review your code. We may request changes to ensure architectural consistency. Please be open to feedback—we're all working together to build great software!
+2. **Update Contributors:** You must add your name and GitHub profile link to the `## Contributors` section in `README.md`.
+3. **Test Your Changes:** Verify that your changes do not break existing functionality. Test the faculty submission flow, the HOD dashboard, and the Excel export.
+4. **Open the PR:** Submit your Pull Request against the `main` branch. Provide a clear description of the problem you are solving and the approach you took.
+5. **Review Process:** A maintainer will review your code. We may request changes to ensure architectural consistency. Please be open to feedback—we're all working together to build great software!
 
 ---
 
