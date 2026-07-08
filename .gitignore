@@ -1,5 +1,5 @@
 # Security
-db.php
+config/db.php
 
 # IDEs and Editors
 .vscode/

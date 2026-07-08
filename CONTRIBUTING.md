@@ -21,7 +21,7 @@ To contribute effectively, set up your local environment:
 
 1. **Prerequisites:** Ensure you have an AMP stack installed (XAMPP, MAMP, or LAMP). You will need PHP 7.4+ and a MySQL server running.
 2. **Fork & Clone:** Fork the repository to your GitHub account, then clone it to your local web server's document root (e.g., `C:\xampp\htdocs\brainware-faculty`).
-3. **Database Configuration:** The application auto-provisions its database. Simply ensure `db.php` has the correct local credentials (default is `root` with no password).
+3. **Database Configuration:** The application auto-provisions its database. Simply ensure `config/db.php` has the correct local credentials (default is `root` with no password).
 4. **Access the App:** Open `http://localhost/brainware-faculty/` in your browser. The database (`brainware_faculty`) will be created automatically.
 
 ---
@@ -34,11 +34,11 @@ To maintain a clean and readable codebase, we ask that all contributors adhere t
 - Follow **PSR-12** coding standards.
 - **Security First:** Always use `real_escape_string()` or prepared statements when interacting with the database to prevent SQL Injection.
 - **Output Encoding:** Always use `htmlspecialchars()` when outputting user-submitted data to prevent Cross-Site Scripting (XSS).
-- Keep logic modular. Form processing (`submit.php`), database connections (`db.php`), and UI presentation should remain logically separated.
+- Keep logic modular. Form processing (`api/submit.php`), database connections (`config/db.php`), and UI presentation should remain logically separated.
 
 ### CSS & JavaScript (Frontend)
 - Use standard semantic HTML.
-- Write clean, vanilla CSS. Keep styling confined to `assets/style.css` using consistent class naming conventions (BEM-inspired).
+- Write clean, vanilla CSS. Keep styling confined to `assets/css/style.css` using consistent class naming conventions (BEM-inspired).
 - Write modular ES6+ JavaScript. Ensure client-side logic (e.g., `form.js`) does not throw console errors.
 
 ---

@@ -35,6 +35,6 @@ When contributing, ensure your code adheres to our baseline security standards:
    - The HOD dashboard and Faculty form are protected by PHP sessions. Do not circumvent session checks.
    - Do not expose administrative logic or endpoints on unprotected routes.
 4. **Environment Configuration:** 
-   - Never commit sensitive database credentials to the repository. The `db.php` file acts as our configuration template; in production environments, ensure these credentials are kept secure and separate from version control.
+   - Never commit sensitive database credentials to the repository. The `config/db.php` file acts as our configuration template; in production environments, ensure these credentials are kept secure and separate from version control.
 
 By maintaining these standards, we ensure the integrity and privacy of Brainware University's administrative data.
