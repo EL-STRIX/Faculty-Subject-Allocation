@@ -101,9 +101,7 @@ The Head of Department can access the administrative dashboard by selecting the 
 | :---: | :---: |
 | ![Form Mockup](docs/form_mockup.png) | ![Dashboard Mockup](docs/dashboard_mockup.png) |
 
-## Contributors
-
-Every developer who contributes to this project is required to add their name and GitHub profile link to this section. We value every contribution!
+## Developers
 
 - [Rajdeep Nemo](https://github.com/Rajdeep-Nemo)
 - [EL-STRIX](https://github.com/EL-STRIX/)
