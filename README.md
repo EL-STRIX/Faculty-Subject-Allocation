@@ -108,7 +108,7 @@ The Head of Department can access the administrative dashboard by selecting the 
 
 ## License
 
-This project is distributed under the MIT License. See the `LICENSE` file for more information.
+This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ---
 
