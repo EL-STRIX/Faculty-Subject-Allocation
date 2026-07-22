@@ -1,3 +1,20 @@
+/*
+|--------------------------------------------------------------------------
+| Database Configuration Guide
+|--------------------------------------------------------------------------
+|
+| Setup Instructions:
+|
+| 1. Make sure MySQL is running.
+| 2. Update the database credentials if required.
+| 3. Verify the database name before running the project.
+|
+| Default Configuration:
+| Host     : localhost
+| Username : root
+| Password : (empty)
+|
+*/
 <?php
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
